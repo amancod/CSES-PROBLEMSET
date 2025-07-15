@@ -1,0 +1,15 @@
+# Ignore all .exe files
+*.exe
+
+# Optional: ignore build folders (e.g., created by Code::Blocks or VS)
+build/
+out/
+bin/
+
+# Optional: ignore temporary files (Windows, editors)
+*.obj
+*.o
+*.log
+*.suo
+*.vcxproj*
+.DS_Store
