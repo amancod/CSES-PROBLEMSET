@@ -80,8 +80,24 @@ ll nCr(ll n, ll r) {
   return p;
 }
 
-void solve() {
-  // write your test case logic here
+void solve(){
+    string s ;
+    cin>>s;
+ 
+    map<char,int>mpp;
+    mpp[s[0]]=1;
+    int maxi=1;
+ 
+    for(int i=1;i<s.size();++i){
+        if(s[i]==s[i-1]){
+            mpp[s[i]]++;
+        }
+        else{
+            mpp[s[i]]=1;
+        }
+        maxi=max(maxi,mpp[s[i]]);
+    }
+    cout<<maxi<<endl;   
 }
 
 signed main() {
@@ -90,7 +106,7 @@ signed main() {
   cout.tie(nullptr);
 
   int t = 1;
-  cin >> t;
+  // cin >> t;
   while (t--) solve();
   return 0;
 }
